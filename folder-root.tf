@@ -1,6 +1,9 @@
 locals {
   root_folder_files = [
     "main.tf",
+    "dns.tf",
+    "dns-resolver.tf",
+    "dns-zones.tf",
     "network.tf",
     "variables.tf",
     "versions.tf"
