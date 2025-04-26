@@ -7,16 +7,17 @@ variable "environment_name" {
 variable "primary_location" {
   type = string
 }
-variable "os_type" {
+variable "base_address_space" {
   type = string
 }
-variable "sku_name" {
+variable "additional_regions" {
+  type = map(string)
+  default = {}
+}
+variable "vpn_address_space" {
   type = string
 }
 variable "additional_tags" {
   type = map(string)
   default = {}
-}
-variable "retention_in_days" {
-  type = number
 }

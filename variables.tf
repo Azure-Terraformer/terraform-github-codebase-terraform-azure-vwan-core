@@ -48,35 +48,9 @@ The primary Azure region where the resources will be deployed.
 Selecting an appropriate primary location is crucial for optimizing latency, compliance, and availability of your Azure resources.
 DESCRIPTION
 }
-variable "os_type" {
-  type        = string
-  description = <<DESCRIPTION
-The operating system type for the Azure App Service Plan.
-
-**Valid Values**:
-- `Windows`
-- `Linux`
-
-This setting determines the underlying OS for the App Service Plan, affecting compatibility with certain Azure services and runtime environments.
-DESCRIPTION
+variable "base_address_space" {
+  type = string
 }
-variable "sku_name" {
-  type        = string
-  description = <<DESCRIPTION
-The SKU name for the Azure App Service Plan, defining the pricing tier and available features.
-
-**Examples**: `Y1` (Consumption Plan), `EP1` (Premium Plan)
-
-Choose a SKU that aligns with your performance requirements and budget. Refer to the [Azure App Service Pricing](https://azure.microsoft.com/en-us/pricing/details/app-service/) for detailed information on available SKUs.
-DESCRIPTION
-}
-variable "retention_in_days" {
-  type        = number
-  description = <<DESCRIPTION
-The number of days to retain logs and monitoring data in the Log Analytics Workspace.
-
-**Default**: `30`
-
-Setting an appropriate retention period helps in managing storage costs and ensuring compliance with data retention policies.
-DESCRIPTION
+variable "vpn_address_space" {
+  type = string
 }
