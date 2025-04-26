@@ -35,6 +35,7 @@ resource "github_repository_file" "terraform_tfvars" {
       primary_location   = var.primary_location
       base_address_space = var.base_address_space
       vpn_address_space  = var.vpn_address_space
+      dns_address_space  = var.dns_address_space
     }
   )
   commit_message      = "Managed by Terraform"
